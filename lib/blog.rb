@@ -6,7 +6,8 @@ class Blog
   def show
     puts ""
 
-    @posts.each do |post|
+    sorted_posts = @posts.sort_by { |post| post.date }
+    sorted_posts.reverse.each do |post|
       puts post.display
       puts ""
       puts "-------------"
