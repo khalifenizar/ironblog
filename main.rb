@@ -1,9 +1,14 @@
+require "date"
+
 require_relative('lib/blog')
+require_relative('lib/post')
 
 blog = Blog.new
+yesterday = Date.today - 1
+today = Date.today
 
-blog.publish("Day 1")
-blog.publish("Day Uno")
-blog.publish("Day of Death")
+blog.publish(Post.new("Day 1", "This day started out okay.", yesterday))
+blog.publish(Post.new("Day Uno", "Este día empezó bien.", yesterday))
+blog.publish(Post.new("Day of Death", "What is happening...", today))
 
 blog.show

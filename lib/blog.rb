@@ -6,13 +6,15 @@ class Blog
   def show
     puts ""
 
-    @posts.each do |title|
-      puts title
+    @posts.each do |post|
+      puts post.display
+      puts ""
       puts "-------------"
+      puts ""
     end
   end
 
-  def publish(post_title)
-    @posts.push(post_title)
+  def publish(post)
+    @posts.push(post)
   end
 end
