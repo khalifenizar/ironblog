@@ -4,14 +4,10 @@ class Blog
   end
 
   def show
-    puts ""
+    displays = @posts.sort.map { |post| post.display }
 
-    @posts.sort.each do |post|
-      puts post.display
-      puts ""
-      puts "-------------"
-      puts ""
-    end
+    puts ""
+    puts displays.join("\n\n-------------\n\n")
   end
 
   def publish(post)
