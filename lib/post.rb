@@ -8,7 +8,8 @@ class Post
   end
 
   def display
-    return "#{@title}\n==============\n> #{@content}"
+    underline = "=" * @title.size
+    return "#{@title}\n#{underline}\n> #{@content}"
   end
 
   def <=>(post)
