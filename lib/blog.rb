@@ -1,5 +1,18 @@
 class Blog
+  def initialize
+    @posts = []
+  end
+
   def show
-    puts "Showing blog posts"
+    puts ""
+
+    @posts.each do |title|
+      puts title
+      puts "-------------"
+    end
+  end
+
+  def publish(post_title)
+    @posts.push(post_title)
   end
 end
