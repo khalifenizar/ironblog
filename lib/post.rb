@@ -9,7 +9,8 @@ class Post
 
   def display
     underline = "=" * @title.size
-    return "#{@title}\n#{underline}\n> #{@content}"
+    pretty_date = @date.strftime("%-m/%d/%Y")
+    return "#{@title}\n#{underline}\n#{pretty_date}\n> #{@content}"
   end
 
   def <=>(post)
